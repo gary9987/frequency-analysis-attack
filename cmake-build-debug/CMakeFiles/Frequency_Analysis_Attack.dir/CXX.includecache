@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/garys/Desktop/108下學期課程/資訊安全/hw1/Frequency-Analysis-Attack/Analysis.cpp
+Analysis.h
+/Users/garys/Desktop/108下學期課程/資訊安全/hw1/Frequency-Analysis-Attack/Analysis.h
+iostream
+-
+
+/Users/garys/Desktop/108下學期課程/資訊安全/hw1/Frequency-Analysis-Attack/Analysis.h
+iostream
+-
+fstream
+-
+
