@@ -32,6 +32,7 @@ public:
     explicit Analysis(const std::string &fileName);
     void printContent();
     void countFrequency();
+    void reverse();
 
 private:
     std::string filename;

@@ -9,5 +9,7 @@ int main() {
     Analysis as("frequency_attack_cipher_example.txt");
     as.printContent();
     as.countFrequency();
+    as.reverse();
+
     return 0;
 }

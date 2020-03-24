@@ -5,6 +5,7 @@
 #include "Analysis.h"
 #include <iostream>
 #include <algorithm>
+#include <map>
 
 using namespace std;
 
@@ -68,6 +69,59 @@ void Analysis::countFrequency() {
             cout<<i;
         }
     }
+}
+
+void Analysis::reverse() {
+    map<char, char> mp;
+    mp['y'] = 'e';
+    mp['n'] = 't';
+    mp['u'] = 'a';
+    mp['h'] = 'n';
+    mp['i'] = 'o';
+    mp['c'] = 'i';
+    mp['l'] = 'r';
+    mp['b'] = 'h';
+    mp['m'] = 's';
+    mp['x'] = 'd';
+    mp['f'] = 'l';
+    mp['w'] = 'c';
+    mp['o'] = 'u';
+    mp['g'] = 'm';
+    mp['a'] = 'g';
+    mp['q'] = 'w';
+    mp['z'] = 'f';
+    mp['s'] = 'y';
+    mp['v'] = 'b';
+    mp['j'] = 'p';
+    mp['p'] = 'v';
+    mp['e'] = 'k';
+    mp['r'] = 'x';
+    mp['k'] = 'j';
+    mp['t'] = 'q';
+    mp['d'] = 'z';
+
+    ifstream fileStream;
+    fileStream.open(this->filename);
+
+    if(!fileStream){
+        std::cout<<"Open file failure\n"<< this->filename;
+    }
+    else{
+        string temp;
+        while ( getline (fileStream,temp) ) {
+            for (auto c :temp) {
+                if (c >= 'a' && c <= 'z') {
+                    cout<<mp[c];
+                }
+                else{
+                    cout<<c;
+                }
+            }
+            cout<<endl;
+        }
+    }
+    fileStream.close();
+
 }
 
 ostream& operator<<(std::ostream &os, const Record &record) {
