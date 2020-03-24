@@ -8,5 +8,6 @@ int main() {
 
     Analysis as("frequency_attack_cipher_example.txt");
     as.printContent();
+    as.countFrequency();
     return 0;
 }

@@ -8,14 +8,35 @@
 #include <iostream>
 #include <fstream>
 
+class Record {
+public:
+    Record(){
+        char key = 0;
+        int count = 0;
+    }
+    Record(char key, int count){
+        this->key = key;
+        this->count = count;
+    }
+    char key;
+    int count = 0;
+    int totalCount = 0;
+
+    friend std::ostream& operator<<(std::ostream& os, const Record &record);
+
+};
+
 class Analysis {
 
 public:
     explicit Analysis(const std::string &fileName);
     void printContent();
+    void countFrequency();
 
 private:
-    std::ifstream fileStream;
+    std::string filename;
+    Record record[26] = {};
+    int totolCount = 0;
 };
 
 
